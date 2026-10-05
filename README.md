@@ -1,10 +1,10 @@
-# 🏥 FastAPI Insurance Premium Prediction
+# FastAPI Insurance Premium Prediction
 
 An end-to-end Machine Learning API built with **FastAPI**, **Pydantic**, and **Scikit-Learn** that predicts insurance premium categories (`High`, `Medium`, `Low`) along with model confidence and class probabilities based on user demographics, health factors, and economic indicators.
 
 ---
 
-## 📌 Features
+## Features
 
 - **Automated Feature Engineering**: Uses Pydantic `@computed_field` to calculate:
   - **BMI**: Derived dynamically from height and weight ($\text{weight} / \text{height}^2$).
@@ -16,7 +16,7 @@ An end-to-end Machine Learning API built with **FastAPI**, **Pydantic**, and **S
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```plaintext
 FastAPI-Insurance-Premium-Prediction/
@@ -36,7 +36,7 @@ FastAPI-Insurance-Premium-Prediction/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Prerequisites
 - **Python 3.10+** (tested on Python 3.13)
@@ -73,12 +73,12 @@ uvicorn app:app --reload
 ```
 The API will be live at: `http://127.0.0.1:8000`
 
-Interactive Swagger Documentation: `http://127.0.0.1:8000/docs`  
-ReDoc Documentation: `http://127.0.0.1:8000/redoc`
+- Interactive Swagger Documentation: `http://127.0.0.1:8000/docs`  
+- ReDoc Documentation: `http://127.0.0.1:8000/redoc`
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 ### Health & Info Endpoints
 
@@ -140,7 +140,7 @@ ReDoc Documentation: `http://127.0.0.1:8000/redoc`
 
 ---
 
-## 🧪 Testing with cURL
+## Testing with cURL
 
 ```bash
 curl -X POST "http://127.0.0.1:8000/predict" \
@@ -158,7 +158,7 @@ curl -X POST "http://127.0.0.1:8000/predict" \
 
 ---
 
-## 🛠️ Tech Stack
+## Technology Stack
 
 - **Framework**: [FastAPI](https://fastapi.tiangolo.com/)
 - **Validation**: [Pydantic v2](https://docs.pydantic.dev/)
