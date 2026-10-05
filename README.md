@@ -20,9 +20,15 @@ An end-to-end Machine Learning API built with **FastAPI**, **Pydantic**, and **S
 
 ```plaintext
 FastAPI-Insurance-Premium-Prediction/
-├── app.py                  # FastAPI application, Pydantic schemas, and inference endpoint
-├── ml-model/
-│   └── model.pkl           # Trained Scikit-Learn Pipeline (Preprocessor + Random Forest)
+├── app.py                  # FastAPI application and endpoint definitions
+├── config/
+│   └── city_tier.py        # City tier classifications (Tier 1 & Tier 2)
+├── model/
+│   ├── model.pkl           # Trained Scikit-Learn Pipeline
+│   └── predict.py          # Model inference and probability scoring logic
+├── schema/
+│   ├── prediction_response.py  # Pydantic response models
+│   └── user_input.py       # Pydantic request models & feature calculations
 ├── requirements.txt        # Pinned dependencies for reproducible deployment
 ├── .gitignore              # Ignored virtual environments, bytecode, and cache
 └── README.md               # Project documentation
