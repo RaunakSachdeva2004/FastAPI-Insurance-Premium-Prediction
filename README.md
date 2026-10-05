@@ -74,6 +74,17 @@ ReDoc Documentation: `http://127.0.0.1:8000/redoc`
 
 ## 🔌 API Reference
 
+### Health & Info Endpoints
+
+- **Root**: `GET /`
+  - Returns a human-readable welcome message.
+  - Response: `{"message": "Insurance Premium Prediction API"}`
+- **Health Check**: `GET /health`
+  - Returns service status, model loaded state, and API version.
+  - Response: `{"status": "OK", "model_loaded": true, "version": "1.0.0"}`
+
+---
+
 ### Predict Premium Category
 
 - **Endpoint**: `POST /predict`

@@ -21,6 +21,8 @@ tier_2_cities = [
     "Kolhapur", "Bilaspur", "Jalandhar", "Noida", "Guntur", "Asansol", "Siliguri"
 ]
 
+MODEL_VERSION = '1.0.0'
+
 # pydantic model to validate incoming data
 class UserInput(BaseModel):
 
@@ -39,7 +41,6 @@ class UserInput(BaseModel):
         v = v.strip().title()
         return v
 
-    
     @computed_field
     @property
     def bmi(self) -> float:
@@ -75,6 +76,20 @@ class UserInput(BaseModel):
             return 2
         else:
             return 3
+
+# human readable       
+@app.get('/')
+def home():
+    return {'message':'Insurance Premium Prediction API'}
+
+# machine readable
+@app.get('/health')
+def health_check():
+    return {
+        'status': 'OK',
+        'model_loaded': model is not None,
+        'version': MODEL_VERSION
+    }
 
 @app.post('/predict')
 def predict_premium(data: UserInput):
